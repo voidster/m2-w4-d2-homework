@@ -2,26 +2,22 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 #leftside {
-  float: left;
   width: 30%;
   min-height: 1200px;
   background-color: rgb(77, 192, 154);
 }
 #rightside {
-  float: left;
   width: 70%;
   min-height: 1200px;
   background-color: rgb(238, 226, 192);
-  position: relative;
 }
 #container {
   background-color: rgba(255, 255, 255, 0.85);
-  position: absolute;
   top: 15%;
   left: 15%;
   min-width: 1100px;
   min-height: 1050px;
-  border-radius: 0.7em;
+  border-radius: 0.7em; /* can be roughly converted to rounded-lg */
 }
 header {
   height: 50px;
@@ -34,16 +30,11 @@ header span,
 header a {
   font-family: "Sacramento", cursive;
 }
-main {
-  position: relative;
-}
+
 main h2 {
-  position: absolute;
   left: 20%;
   top: 30px;
-  margin: 25px 0 200px 50px;
   color: rgb(60, 190, 160);
-  text-transform: uppercase;
 }
 main #photos img {
   margin: 0.75em;
