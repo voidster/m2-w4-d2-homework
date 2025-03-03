@@ -1,12 +1,3 @@
-// Header Component
-Vue.component("header-component", {
-  template: `
-        <header>
-            <span>Food Blog</span>
-        </header>
-    `,
-});
-
 // Photo Component
 Vue.component("photo-component", {
   props: ["src", "alt"],
@@ -15,7 +6,6 @@ Vue.component("photo-component", {
     `,
 });
 
-// Comment Component
 // Comment Component with Profile Picture
 Vue.component("comment-component", {
   props: ["author", "date", "content", "profile", "lvl", "bio"],
@@ -49,6 +39,25 @@ Vue.component("comment-component", {
 // Vue Instance with Corrected Profile Data
 new Vue({
   el: "#container",
+  //Local Header Component
+  components: {
+    "header-component": {
+      template: `
+                <header class="navbar">
+                    <span class="logo">Food Blog</span>
+                    <nav>
+                        <ul class="nav-links">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Recipes</a></li>
+                            <li><a href="#">Lifestyles</a></li>
+                            <li><a href="#">Videos</a></li>
+                            <li><a href="#">About</a></li>
+                        </ul>
+                    </nav>
+                </header>
+            `,
+    },
+  },
   data: {
     comments: [
       {
