@@ -38,7 +38,7 @@
         <!-- <h2>Comments</h2> -->
         <h2 class="text-uppercase position-absolute mt-4 ml-5">Comments</h2>
 
-        <section id="blogposts">
+        <section id="blogposts" class="position-absolute">
           <comment-component
             v-for="(comment, index) in comments"
             :key="index"
@@ -52,7 +52,9 @@
           </comment-component>
         </section>
       </main>
-      <footer>&copy; Copyright FOOD BLOG</footer>
+      <footer class="text-center position-absolute">
+        &copy; Copyright FOOD BLOG
+      </footer>
     </div>
     <!-- Bootstrap jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

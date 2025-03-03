@@ -14,7 +14,7 @@ Vue.component("comment-component", {
   },
   template: `
         <div class="post">
-            <div class="comment-header">
+            <div class="comment-header d-flex align-items-center">
                 <img :src="profile" alt="Profile Picture" class="profile-pic" @click="showPopup = true">
                 <span class="author">{{ author }}</span> — 
                 <span class="date">{{ date }}</span>
@@ -24,34 +24,34 @@ Vue.component("comment-component", {
             <p>{{ content }}</p>
 
             <!-- Floating Info Box -->
-            <div v-if="showPopup" class="floating-box">
-                <span class="close-btn" @click="showPopup = false">&times;</span>
-                <div class="bio-header">{{ author }}</div>
+            <div v-if="showPopup" class="floating-box position-absolute text-white">
+                <span class="close-btn float-right" @click="showPopup = false">&times;</span>
+                <div class="bio-header font-weight-bold mb-3">{{ author }}</div>
                 <p><strong>Foodie Level:</strong> {{ lvl }}</p>
                 <p><strong>Bio:</strong></p>
-                <p class="bio">{{ bio }}</p>
+                <p class="bio mb-4">{{ bio }}</p>
                 <button @click="showPopup = false">Close</button>
             </div>
         </div>
     `,
 });
 
-// Vue Instance with Corrected Profile Data
+// Vue Instance
 new Vue({
   el: "#container",
   //Local Header Component
   components: {
     "header-component": {
       template: `
-                <header class="navbar">
-                    <span class="logo">Food Blog</span>
+                <header class="d-flex justify-content-between align-items-center bg-white p-2">
+                    <span class="font-weight-bold">Food Blog</span>
                     <nav>
-                        <ul class="nav-links">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Recipes</a></li>
-                            <li><a href="#">Lifestyles</a></li>
-                            <li><a href="#">Videos</a></li>
-                            <li><a href="#">About</a></li>
+                        <ul class="nav d-flex" style="">
+                            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Recipes</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Lifestyles</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Videos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
                         </ul>
                     </nav>
                 </header>
